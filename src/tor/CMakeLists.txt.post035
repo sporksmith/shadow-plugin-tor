@@ -131,7 +131,7 @@ endforeach()
 #--------------------------------------------------------------------------
 
 ## create and install a shared library that can plug into shadow
-add_shadow_plugin(shadow-plugin-tor shadowtor-main.c ${all_src})
+add_library(shadow-plugin-tor shadowtor-main.c ${all_src})
 
 if(TARGET torkeccak)
     add_dependencies(shadow-plugin-tor torkeccak)

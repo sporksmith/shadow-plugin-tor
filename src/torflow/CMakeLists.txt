@@ -35,6 +35,6 @@ set(sources
 )
 
 ## create and install a dynamic library that can plug into shadow
-add_shadow_plugin(shadow-plugin-torflow ${sources})
+add_library(shadow-plugin-torflow ${sources})
 target_link_libraries(shadow-plugin-torflow ${GLIB_LIBRARIES} ${M_LIBRARIES})
 install(TARGETS shadow-plugin-torflow DESTINATION lib)
